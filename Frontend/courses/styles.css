@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial, sans-serif;
+  }
+  
+  svg {
+    fill: rgb(96, 96, 96);
+  }
+  
+  .navigation {
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    height: 56px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+  }
+  
+  .navigation__button {
+    border: none;
+    padding: 5px 10px;
+    background-color: transparent;
+    cursor: pointer;
+    line-height: 5px;
+  }
+  
+  .navigation__menu,
+  .navigation__search,
+  .navigation__options {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navigation__options .navigation__button {
+    margin-right: 8px;
+  }
+  
+  .navigation__menu img {
+    margin-left: 5px;
+  }
+  
+  .navigation__menu__button svg {
+    height: 24px;
+  }
+  
+  .navigation__search input {
+    width: 360px;
+    height: 32px;
+    border: 1px solid rgb(211, 211, 211);
+    font-size: 16px;
+    padding: 3px 8px;
+  }
+  
+  .navigation__search__icon {
+    border: 1px solid rgb(211, 211, 211);
+    border-left: none;
+    height: 32px;
+    width: 65px;
+  }
+  
+  .navigation__search__icon:hover {
+    background-color: #e4e4e4;
+  }
+  
+  .navigation__search__icon svg {
+    height: 20px;
+    width: 20px;
+  }
+  
+  .navigation__options {
+    display: flex;
+  }
+  
+  .navigation__icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .navigation__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: grey;
+  }
+  
+  .chips {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    position: fixed;
+    top: 56px;
+    right: 0;
+    left: 240px;
+    background-color: white;
+  }
+  
+  .chips__item {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    padding: 0 12px;
+    line-height: 30px;
+    border-radius: 16px;
+    margin: 12px 12px 12px 0;
+    cursor: pointer;
+  }
+  
+  .chips__item:first-child {
+    margin-left: 24px;
+  }
+  
+  .chips__item--selected {
+    background-color: black;
+    color: white;
+  }
+  
+  .sidebar {
+    width: 240px;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    bottom: 0;
+    padding: 12px 0;
+    height: calc(100vh - 80px);
+    overflow-y: scroll;
+  }
+  
+  .sidebar__section {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar__section h3 {
+    padding: 8px 24px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: rgb(96, 96, 96);
+  }
+  
+  .sidebar__section__link {
+    display: flex;
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+    align-items: center;
+    font-size: 14px;
+    padding: 0 24px;
+    height: 40px;
+  }
+  
+  .sidebar__section__link svg,
+  .sidebar__section__avatar {
+    height: 24px;
+    width: 24px;
+    margin-right: 24px;
+  }
+  
+  .sidebar__section__avatar {
+    border-radius: 50%;
+    background-color: grey;
+  }
+  
+  .sidebar__section__link--selected {
+    background-color: rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+  }
+  
+  .sidebar__section__link--selected svg {
+    fill: #f00
+  }
+  
+  .sidebar__section:last-child {
+    padding: 16px 24px 0 24px
+  }
+  
+  .sidebar__section:last-child p {
+    font-size: 13px;
+    color: #909090;
+  }
+  
+  .sidebar__section__link--small {
+    margin-right: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #606060;
+    text-decoration: none;
+  }
+  
+  .feed {
+    margin-top: 140px;
+    margin-left: 240px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .feed__item {
+    margin: 0 8px 40px 8px;
+  }
+  
+  .feed__item__thumbnail {
+    width: 360px;
+    height: 202px;
+    background-color: grey;
+  }
+  
+  .feed__item__info {
+    display: flex;
+    font-size: 14px;
+    color: rgb(96, 96, 96);
+  }
+  
+  .feed__item__info h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: rgb(3, 3, 3);
+  }
+  
+  .feed__item__info a {
+    text-decoration: none;
+    color: unset;
+  }
+  
+  .feed__item__info p {
+    margin: 0;
+  }
+  
+  .feed__item__info__avatar {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background-color: grey;
+    margin: 12px 12px 0 0;
+  }
+  
+  .feed__section {
+    border-top: 3px solid lightgrey;
+    border-bottom: 3px solid lightgrey;
+    margin: 24px 35px 48px;
+  }
+  
+  .feed__section h2 {
+    margin-left: 8px;
+  }
+  
+  .feed__section__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
