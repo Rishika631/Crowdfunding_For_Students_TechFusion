@@ -1,5 +1,13 @@
 
-# CrowdFunding
+
+## Demo Link
+https://edufittechfusion.netlify.app/
+
+## Video Link
+https://drive.google.com/file/d/1Vqmz7CsYdeoFE0rZtA1hmdyLNg5OlIPE/view?usp=sharing
+
+## Presentation Link
+https://drive.google.com/file/d/1DV02mQJcGfaY3-hdkqowo_VmOANpUzje/view?usp=sharing
 # Crowdfunding for Underprivileged Students
 
 This project aims to provide a crowdfunding platform for raising funds to support underprivileged students' education. It utilizes sentiment analysis using Python's TextBlob to rate students based on their 10th and 12th marks along with family income. The platform also includes features for different courses and a blog section. Donors can contribute to student campaigns using the integrated payment gateway.
