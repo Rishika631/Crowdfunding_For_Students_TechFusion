@@ -22,7 +22,7 @@ This project aims to provide a crowdfunding platform for raising funds to suppor
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/Rishika631/crowdfunding-for-students.git`
+1. Clone the repository: `git clone https://github.com/Rishika631/Crowdfunding_For_Students_TechFusion.git`
 2. Navigate to the project directory: `cd crowdfunding-for-students/backend`
 3. Install backend dependencies: `npm install`
 4. Navigate to the `client` directory: `cd Frontend/my-app`
