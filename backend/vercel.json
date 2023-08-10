@@ -5,7 +5,7 @@
     { "src": "*.py", "use": "@vercel/python" }
   ],
   "routes": [
-    
+    {"src": "/addstudent", "methods": ["POST"], "dest": "/students.js" },
     { "src": "/(.*)", "dest": "/" }
   ]
 
