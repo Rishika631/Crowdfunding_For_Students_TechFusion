@@ -7,6 +7,13 @@ const { spawn } = require("child_process");
 const ejs = require('ejs');
 const port=4000;
 const app=express();
+const corsOptions = {
+    origin: 'http://127.0.0.1:5000/Frontend/cause_details.html', // Specify the allowed origin
+    optionsSuccessStatus: 200 // Return a success status for preflight requests
+};
+
+app.use(cors(corsOptions));
+
 
 // ROUTE 1 : Fetching All students on: GET "/api/students/fetchstudent/"
 /*router.get("/fetchstudent", async (req, res) => {
