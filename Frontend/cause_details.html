@@ -190,23 +190,23 @@ function fetchAndRenderStudentEJS() {
     fetch(`https://crowdfunding-for-students-tech-fusion.vercel.app/api/students/fetchstudent2`)
         .then(response => response.json())
         .then(student => {
-            if (!student) {
+            if (!student || student.length === 0) {
                 console.log('No student found.');
                 return;
             }
 
-            // Replace these property names with the actual properties from the API response
+            const studentDetailsDiv = document.getElementById('student');
             const ejsContent = `
-                <div>Name: ${student.studentName}</div>
-                <p>Email: ${student.email}</p>
-                <p>10th Marks: ${student.tenmarks}</p>
-                <p>12th Marks: ${student.twelvemarks}</p>
-                <p>School: ${student.school}</p>
-                <p>Father Name: ${student.fatherName}</p>
-                <p>Family Income: ${student.income}</p>
-                <p>Rating: ${student.rating}</p>
+                <div>Name: ${student[0].studentName}</div>
+                <p>Email: ${student[0].email}</p>
+                <p>10th Marks: ${student[0].tenmarks}</p>
+                <p>12th Marks: ${student[0].twelvemarks}</p>
+                <p>School: ${student[0].school}</p>
+                <p>Father Name: ${student[0].fatherName}</p>
+                <p>Family Income: ${student[0].income}</p>
+                <p>Rating: ${student[0].rating}</p>
             `;
-            document.getElementById('studentDetails').innerHTML = ejsContent;
+            studentDetailsDiv.innerHTML = ejsContent;
         })
         .catch(error => {
             console.error('Error fetching or rendering data:', error);
@@ -214,6 +214,7 @@ function fetchAndRenderStudentEJS() {
 }
 
 fetchAndRenderStudentEJS();
+
 
 
       </script>
