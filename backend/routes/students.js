@@ -41,27 +41,8 @@ router.get("/fetchstudent", async (req, res) => {
     }
 });
 
-router.get("/fetchstudent2", async (req, res) => {
-    try {
-        const student = await Student.find().skip(1).limit(1);
-
-        if (!student || student.length === 0) {
-            return res.status(404).json({ success: false, msg: "No second student found" });
-        }
-
-        return res.json(student);
-    } catch (error) {
-        console.error(error);
-        return res.status(500).json({ success: false, error: "Internal Server Error" });
-    }
-});
-
-
-
-
-
 // ROUTE 2 : Adding a New student on: POST "/api/students/addstudent"
-router.post("/addstudents", [
+router.post("/addstudent", [
     body('email', 'Invalid email').isEmail(),
 ], async (req, res) => {
     try {
@@ -116,6 +97,20 @@ router.post("/addstudents", [
 });
 
 
+router.get("/fetchstudent2", async (req, res) => {
+    try {
+        const student = await Student.find().skip(1).limit(1);
+
+        if (!student || student.length === 0) {
+            return res.status(404).json({ success: false, msg: "No second student found" });
+        }
+
+        return res.json(student);
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ success: false, error: "Internal Server Error" });
+    }
+});
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
