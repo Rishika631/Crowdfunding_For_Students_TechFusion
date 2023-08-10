@@ -179,7 +179,7 @@
 
  function fetchAndRenderStudentEJS(studentName) {
     // Fetch the EJS content from the API using the student's name and render it in the "studentlist" element
-    fetch(`http://127.0.0.1:5000/api/students/?name=${studentName}`) // Include the student's name in the API URL
+    fetch(`http://127.0.0.1:5000/api/students/fetchstudent`) // Include the student's name in the API URL
         .then(response => response.text())
         .then(ejsContent => {
             document.getElementById('ejsContent').innerHTML = ejsContent;
