@@ -26,6 +26,10 @@ const app=express();
 router.get("/fetchstudent", async (req, res) => {
     try {
         const studentName = req.query.name; // Extract student name from query parameter
+        if (!studentName) {
+            return res.status(400).json({ success: false, msg: "Student name parameter missing" });
+        }
+
         const student = await Student.findOne({ name: studentName });
 
         if (!student) {
@@ -38,6 +42,7 @@ router.get("/fetchstudent", async (req, res) => {
         return res.status(500).json({ success: false, error: "Internal Server Error" });
     }
 });
+
 
 
 // ROUTE 2 : Adding a New student on: POST "/api/students/addstudent"
