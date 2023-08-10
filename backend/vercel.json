@@ -1,8 +1,7 @@
 {
   "version": 2,
   "builds": [
-    { "src": "*.js", "use": "@vercel/node" },
-    { "src": "*.py", "use": "@vercel/python" }
+    { "src": "*.js", "use": "@vercel/node" }
   ],
   "routes": [
     {"src": "/addstudent", "methods": ["POST"], "dest": "/students.js" },
