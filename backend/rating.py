@@ -6,9 +6,7 @@ import sys
 # Your conversion and rating calculation functions (convert_to_labels and calculate_sentiment_rating) go here.
 
 # Connect to MongoDB
-client = pymongo.MongoClient("mongodb+srv://Rishika:taylorswift@cluster0.acug8d2.mongodb.net/?retryWrites=true&w=majority")
-db = client["allindiahack"]  # Replace "your_database_name" with your actual database name
-collection = db["allindiahack"]  # Replace "your_collection_name" with your actual collection name
+client = pymongo.MongoClient("MONGODB_URL")
 script_name, _id, tenmarks, twelvemarks, income = sys.argv
 def convert_to_labels(grade_10th, grade_12th, family_income):
     # Your conversion logic goes here.
