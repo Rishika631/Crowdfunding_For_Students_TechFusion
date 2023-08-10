@@ -25,15 +25,10 @@ const app=express();
 });*/
 router.get("/fetchstudent", async (req, res) => {
     try {
-        const studentName = req.query.name; // Extract student name from query parameter
-        if (!studentName) {
-            return res.status(400).json({ success: false, msg: "Student name parameter missing" });
-        }
-
-        const student = await Student.findOne({ name: studentName });
+        const student = await Student.findOne().sort({ name: 1 }); // Get the first student
 
         if (!student) {
-            return res.status(404).json({ success: false, msg: "Student not found" });
+            return res.status(404).json({ success: false, msg: "No students found" });
         }
 
         return res.json(student);
@@ -42,6 +37,7 @@ router.get("/fetchstudent", async (req, res) => {
         return res.status(500).json({ success: false, error: "Internal Server Error" });
     }
 });
+
 
 
 
