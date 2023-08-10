@@ -9,7 +9,7 @@ const port=4000;
 const app=express();
 
 // ROUTE 1 : Fetching All students on: GET "/api/students/fetchstudent/"
-router.get("/fetchstudent", async (req, res) => {
+/*router.get("/fetchstudent", async (req, res) => {
     try {
         let students = await Student.find().sort({ date: -1 })
 
@@ -22,7 +22,23 @@ router.get("/fetchstudent", async (req, res) => {
         console.log(error);
         return res.status(500).json({ success, error: "Internal Server Error" });
     }
+});*/
+router.get("/fetchstudent", async (req, res) => {
+    try {
+        const studentName = req.query.name; // Extract student name from query parameter
+        const student = await Student.findOne({ name: studentName });
+
+        if (!student) {
+            return res.status(404).json({ success: false, msg: "Student not found" });
+        }
+
+        return res.json(student);
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({ success: false, error: "Internal Server Error" });
+    }
 });
+
 
 // ROUTE 2 : Adding a New student on: POST "/api/students/addstudent"
 router.post("/addstudent", [
