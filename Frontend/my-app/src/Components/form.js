@@ -29,7 +29,7 @@ const Form = () => {
         e.preventDefault();
     
         try {
-            const response = await fetch('http://localhost:5000/api/students/addstudent', {
+            const response = await fetch('https://crowdfunding-for-students-tech-fusion.vercel.app/api/students/addstudent', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
