@@ -61,7 +61,7 @@ router.get("/fetchstudent2", async (req, res) => {
 
 
 // ROUTE 2 : Adding a New student on: POST "/api/students/addstudent"
-router.post("/addstudent", [
+router.post("/addstudents", [
     body('email', 'Invalid email').isEmail(),
 ], async (req, res) => {
     try {
