@@ -1,7 +1,7 @@
 
 
 ## Demo Link
-https://edufittechfusion.netlify.app/
+https://edufit.vercel.app/
 
 ## Video Link
 https://drive.google.com/file/d/1Vqmz7CsYdeoFE0rZtA1hmdyLNg5OlIPE/view?usp=sharing
