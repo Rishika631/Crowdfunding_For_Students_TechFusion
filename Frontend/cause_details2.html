@@ -189,7 +189,7 @@
             console.error('Error fetching or rendering data:', error);
         });
 }*/
-   function fetchAndRenderStudentEJS() {
+ function fetchAndRenderStudentEJS() {
     fetch(`https://crowdfunding-for-students-tech-fusion.vercel.app/api/students/fetchstudent2`)
         .then(response => response.json())
         .then(student => {
@@ -200,8 +200,8 @@
 
             const studentDetailsDiv = document.getElementById('student');
             const ejsContent = `
-                <div>Name: Anita</div>
-                <p>Email:anita@gmail.com</p>
+                <div>Name: ${student[0].studentName}</div>
+                <p>Email: ${student[0].email}</p>
                 <p>10th Marks: ${student[0].tenmarks}</p>
                 <p>12th Marks: ${student[0].twelvemarks}</p>
                 <p>School: ${student[0].school}</p>
