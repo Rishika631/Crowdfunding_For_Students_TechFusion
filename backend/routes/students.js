@@ -117,7 +117,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Example CORS headers on the server (Node.js with Express)
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://crowdfunding-for-students-tech-fusion-fsd5.vercel.app'); // Replace with your domain
+    res.header('Access-Control-Allow-Origin', 'https://crowdfunding-for-students-tech-fusion.vercel.app/'); // Replace with your domain
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     next();
