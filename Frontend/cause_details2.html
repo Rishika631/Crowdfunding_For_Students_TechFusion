@@ -190,7 +190,7 @@
         });
 }*/
    function fetchAndRenderStudentEJS() {
-    fetch(`https://crowdfunding-for-students-tech-fusion.vercel.app/api/students/fetchstudent`)
+    fetch(`https://crowdfunding-for-students-tech-fusion.vercel.app/api/students/fetchstudent2`)
         .then(response => response.json())
         .then(student => {
             if (!student || student.length === 0) {
@@ -200,8 +200,8 @@
 
             const studentDetailsDiv = document.getElementById('student');
             const ejsContent = `
-                <div>Name: ${student[0].studentName}</div>
-                <p>Email: ${student[0].email}</p>
+                <div>Name: Anita</div>
+                <p>Email:anita@gmail.com</p>
                 <p>10th Marks: ${student[0].tenmarks}</p>
                 <p>12th Marks: ${student[0].twelvemarks}</p>
                 <p>School: ${student[0].school}</p>
