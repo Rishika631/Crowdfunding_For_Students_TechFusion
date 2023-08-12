@@ -189,25 +189,25 @@
             console.error('Error fetching or rendering data:', error);
         });
 }*/
-    function fetchAndRenderStudentEJS() {
+   function fetchAndRenderStudentEJS() {
     fetch(`https://crowdfunding-for-students-tech-fusion.vercel.app/api/students/fetchstudent`)
         .then(response => response.json())
-        .then(students => {
-            if (!students || students.length === 0) {
+        .then(student => {
+            if (!student || student.length === 0) {
                 console.log('No student found.');
                 return;
             }
 
-            const studentDetailsDiv = document.getElementById('students');
+            const studentDetailsDiv = document.getElementById('student');
             const ejsContent = `
-                <div>Name: Anita</div>
-                <p>Email: anita@gmail.com</p>
-                <p>10th Marks: ${students[0].tenmarks}</p>
-                <p>12th Marks: ${students[0].twelvemarks}</p>
-                <p>School: ${students[0].school}</p>
-                <p>Father Name: ${students[0].fatherName}</p>
-                <p>Family Income: ${students[0].income}</p>
-                <p>Rating: ${students[0].rating}</p>
+                <div>Name: ${student[0].studentName}</div>
+                <p>Email: ${student[0].email}</p>
+                <p>10th Marks: ${student[0].tenmarks}</p>
+                <p>12th Marks: ${student[0].twelvemarks}</p>
+                <p>School: ${student[0].school}</p>
+                <p>Father Name: ${student[0].fatherName}</p>
+                <p>Family Income: ${student[0].income}</p>
+                <p>Rating: ${student[0].rating}</p>
             `;
             studentDetailsDiv.innerHTML = ejsContent;
         })
@@ -217,7 +217,6 @@
 }
 
 fetchAndRenderStudentEJS();
-
 
 // Call the function with the desired student's name
 //const studentName = "Anita"; // Replace with the actual student's name
