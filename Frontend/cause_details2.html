@@ -190,7 +190,7 @@
         });
 }*/
  function fetchAndRenderStudentEJS() {
-    fetch(`https://crowdfunding-for-students-tech-fusion.vercel.app/api/students/fetchstudent2`)
+    fetch(`https://crowdfunding-for-students-tech-fusion.vercel.app/api/students/fetchstudent`)
         .then(response => response.json())
         .then(student => {
             if (!student || student.length === 0) {
