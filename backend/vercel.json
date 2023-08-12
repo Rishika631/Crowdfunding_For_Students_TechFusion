@@ -4,8 +4,8 @@
     { "src": "*.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/students/fetchstudent", "methods": ["GET"], "dest": "/students.js" },
-    { "src": "/api/students/fetchstudent2", "methods": ["GET"], "dest": "/students.js" },
+    { "src": "/fetchstudent", "methods": ["GET"], "dest": "/students.js" },
+    { "src": "/fetchstudent2", "methods": ["GET"], "dest": "/students.js" },
     { "src": "/addstudent", "methods": ["POST"], "dest": "/students.js" },
     { "src": "/(.*)", "dest": "/" }
   ]
